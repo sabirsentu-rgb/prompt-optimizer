@@ -62,7 +62,7 @@ export default {
     context: "上下文",
     copySuccess: "複製成功",
     copyFailed: "複製失敗",
-    appName: "提示詞優化器",
+    appName: "pp提示词优化",
     selectFile: "選擇檔案",
     exporting: "匯出中...",
     importing: "匯入中...",
@@ -110,7 +110,7 @@ export default {
   nav: {
     home: "首頁",
     dashboard: "儀表板",
-    promptOptimizer: "提示詞優化器",
+    promptOptimizer: "pp提示词优化",
     modelManager: "模型管理",
     history: "歷史紀錄",
     templates: "功能提示詞",
@@ -124,7 +124,7 @@ export default {
     imageMode: "圖像",
   },
   about: {
-    title: "提示詞優化器",
+    title: "pp提示词优化",
     website: "官網",
     websiteLabel: "always200.com",
     documentation: "文件站",
@@ -493,7 +493,7 @@ export default {
     },
   },
   promptOptimizer: {
-    title: "提示詞優化器",
+    title: "pp提示词优化",
     inputPlaceholder: "請輸入需要優化的prompt...",
     optimize: "優化",
     analyze: "分析",
@@ -1789,10 +1789,10 @@ export default {
       smart: { name: "智慧識別", description: "自動偵測格式並轉換" },
       openai: { name: "OpenAI", description: "OpenAI API 請求格式" },
       langfuse: { name: "LangFuse", description: "LangFuse 追蹤資料格式" },
-      conversation: { name: "內部格式", description: "Prompt Optimizer 內部標準 JSON 結構" },
+      conversation: { name: "內部格式", description: "pp提示词优化 內部標準 JSON 結構" },
     },
     exportFormats: {
-      standard: { name: "內部格式", description: "Prompt Optimizer 內部標準資料格式" },
+      standard: { name: "內部格式", description: "pp提示词优化 內部標準資料格式" },
       openai: { name: "OpenAI", description: "OpenAI API 相容格式" },
     },
 
