@@ -61,7 +61,7 @@ const messages = {
       magpieTitle: 'How do I get a gateway key?', ollamaTitle: 'API key and web connection help',
       system: 'Operating system', powershell: 'Run in PowerShell:', terminal: 'Run in a terminal:',
       copyCommand: 'Copy command', copyFailed: 'Could not copy. Select and copy the command manually.',
-      magpieIntro: 'This command creates a new gateway key named Prompt Optimizer and prints its full value. It does not retrieve an existing key.',
+      magpieIntro: 'This command creates a new gateway key named pp提示词优化 and prints its full value. It does not retrieve an existing key.',
       magpieAfter: 'Paste the complete sk-magpie-key-… value into API Key, then fetch models. Do not add Bearer. The placeholder magpie does not authenticate browser requests.',
       windowsPath: 'Uses the default Windows installation path. If you installed elsewhere, replace it with the actual magpie-cli.exe path.',
       unixPath: 'Magpie must be installed and the magpie command available in your terminal. If it is not found, use the actual executable path.',

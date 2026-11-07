@@ -1,6 +1,6 @@
 const messages = {
   "promptOptimizer": {
-    "title": "Prompt Optimizer",
+    "title": "pp提示词优化",
     "inputPlaceholder": "Enter your prompt to optimize...",
     "optimize": "Optimize",
     "analyze": "Analyze",
