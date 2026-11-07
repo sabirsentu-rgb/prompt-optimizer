@@ -11,8 +11,8 @@ export function createPwaPlugin() {
     devOptions: { enabled: false },
     manifest: {
       id: './',
-      name: '提示词优化器',
-      short_name: '提示词优化器',
+      name: 'pp提示词优化',
+      short_name: 'pp提示词优化',
       description: '优化提示词、比较模型结果，保存你的提示词工作区。',
       lang: 'zh-CN',
       start_url: './',
@@ -21,9 +21,9 @@ export function createPwaPlugin() {
       background_color: '#ffffff',
       theme_color: '#ffffff',
       icons: [
-        { src: 'pwa/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
-        { src: 'pwa/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
-        { src: 'pwa/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+        { src: 'pp-logo.png', sizes: '1254x1254', type: 'image/png', purpose: 'any' },
+        { src: 'pp-logo.png', sizes: '1254x1254', type: 'image/png', purpose: 'any' },
+        { src: 'pp-logo.png', sizes: '1254x1254', type: 'image/png', purpose: 'maskable' },
       ],
     },
     injectManifest: {
