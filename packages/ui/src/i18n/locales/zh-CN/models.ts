@@ -62,7 +62,7 @@ const messages = {
       ollamaTitle: 'API Key 与网页连接说明',
       system: '操作系统', powershell: '在 PowerShell 中执行：', terminal: '在终端中执行：',
       copyCommand: '复制命令', copyFailed: '复制失败，请选中命令手动复制。',
-      magpieIntro: '以下命令会新建一个名为 Prompt Optimizer 的网关密钥，并显示完整密钥；不会读取已有密钥。',
+      magpieIntro: '以下命令会新建一个名为 pp提示词优化 的网关密钥，并显示完整密钥；不会读取已有密钥。',
       magpieAfter: '将输出的 sk-magpie-key-… 完整粘贴到 API 密钥输入框，再获取模型列表。不要添加 Bearer 前缀；magpie 占位值不能用于网页认证。',
       windowsPath: '命令使用 Windows 默认安装路径；若修改过安装位置，请替换为实际的 magpie-cli.exe 路径。',
       unixPath: '需要已安装 Magpie，并能在终端运行 magpie。若提示找不到命令，请使用实际的可执行文件路径。',
