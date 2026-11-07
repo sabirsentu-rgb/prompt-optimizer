@@ -29,7 +29,9 @@
             <NText depth="2">{{ t("log.info.initializing") }}</NText>
         </div>
         <template v-else>
-            <MainLayoutUI>
+            <PPSimpleWorkspace v-if="simpleMode && !ppAdvanced" @advanced="ppAdvanced = true" @backup="showDataManager = true" @favorites="ppAdvanced = true; openFavoritesPage()" @busy="ppBusy = $event" />
+            <button v-if="simpleMode && ppAdvanced" class="pp-back-simple" @click="ppAdvanced = false">← 返回简洁首页</button>
+            <div v-show="!simpleMode || ppAdvanced"><MainLayoutUI>
                 <template #mobile-nav>
                     <CompactNavigation
                         :workspace-path="activeWorkspaceContextPath"
@@ -84,7 +86,7 @@
                         />
                     </RouterView>
                 </template>
-            </MainLayoutUI>
+            </MainLayoutUI></div>
 
             <!-- Modals and Drawers that are conditionally rendered -->
             <ModelManagerUI
@@ -272,6 +274,10 @@ import jsonLang from "highlight.js/lib/languages/json";
 hljs.registerLanguage("json", jsonLang);
 
 // 内部组件导入
+import PPSimpleWorkspace from './PPSimpleWorkspace.vue'
+const { simpleMode = false } = defineProps<{ simpleMode?: boolean }>();
+const ppAdvanced = ref(false);
+const ppBusy = ref(false);
 import MainLayoutUI from '../MainLayout.vue'
 import CompactNavigation from './CompactNavigation.vue'
 import { useWorkspaceViewState } from '../../composables/ui/useWorkspaceViewState'
@@ -2361,7 +2367,7 @@ const compactAutosave = useCompactSessionAutosave({
 
 // Optional Web/PWA host API. No service worker or browser update state enters UI stores.
 const arenaSession = useArenaSession();
-const isWorkspaceBusy = () => !isReady.value || sessionManager.isSwitching || arenaSession.running ||
+const isWorkspaceBusy = () => ppBusy.value || !isReady.value || sessionManager.isSwitching || arenaSession.running ||
   hasSessionConflicts(services.value?.preferenceService) ||
   !!activeWorkspaceRef.value?.isUpdateBusy?.();
 const prepareSessionRestore = async (): Promise<(() => void) | null> => {
@@ -2567,4 +2573,8 @@ onBeforeUnmount(async () => {
     color: var(--n-text-color);
     background-color: var(--n-body-color, var(--n-color));
 }
+</style>
+
+<style>
+.pp-back-simple{position:fixed;bottom:24px;left:24px;z-index:1500;border:1px solid #dcc8f0;border-radius:24px;background:#fff;color:#7c45b4;padding:10px 18px;box-shadow:0 4px 20px #50207022;cursor:pointer}
 </style>
