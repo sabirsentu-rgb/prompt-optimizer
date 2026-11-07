@@ -11,7 +11,7 @@
         - 此文件仅作为应用壳，减少代码重复
     -->
     <div class="web-workspace" :inert="updateLocked || undefined" :aria-busy="updateLocked">
-        <PromptOptimizerApp ref="workspace" />
+        <PromptOptimizerApp ref="workspace" simple-mode />
     </div>
     <PwaControls :prepare-for-update="prepareForUpdate" @update-lock="updateLocked = $event" />
 </template>
