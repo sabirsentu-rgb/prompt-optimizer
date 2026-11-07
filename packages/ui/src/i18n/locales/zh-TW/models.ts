@@ -61,7 +61,7 @@ const messages = {
       magpieTitle: '如何取得閘道金鑰？', ollamaTitle: 'API Key 與網頁連線說明',
       system: '作業系統', powershell: '在 PowerShell 中執行：', terminal: '在終端機中執行：',
       copyCommand: '複製命令', copyFailed: '複製失敗，請選取命令手動複製。',
-      magpieIntro: '以下命令會新增名為 Prompt Optimizer 的閘道金鑰，並顯示完整金鑰；不會讀取現有金鑰。',
+      magpieIntro: '以下命令會新增名為 pp提示词优化 的閘道金鑰，並顯示完整金鑰；不會讀取現有金鑰。',
       magpieAfter: '將輸出的 sk-magpie-key-… 完整貼到 API 金鑰欄位，再取得模型清單。不要加上 Bearer 前綴；magpie 佔位值不能用於網頁認證。',
       windowsPath: '命令使用 Windows 預設安裝路徑；若修改過安裝位置，請替換為實際的 magpie-cli.exe 路徑。',
       unixPath: '需要已安裝 Magpie，並能在終端機執行 magpie。若提示找不到命令，請使用實際的執行檔路徑。',
